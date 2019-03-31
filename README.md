@@ -60,22 +60,22 @@
     2. Some simple shell script to verify the correctness of the output.
 
 #Scope for improvements: 
+
+    1.  Keys can be precomputed and stored so that the computation overhead will be reduced. 
     
-    1.  Choosing the read buffer constants ( the amount of data that is read at once form the stream) 
+    2.  Choosing the read buffer constants ( the amount of data that is read at once form the stream) 
         based on the  undelyugn cache architecture. If we model our input reads
         in such a way that no threads will run into one another cache lines 
         and thus lead to thrashign , we will get maximum performance gain. 
      
-     2. More robust error checking can be done . Currently I am 
-        doing error checks for the very likely systems calls that mgiht fail 
+     3. More robust error checking can be done . Currently I am 
+        doing error checks for the very likely systems calls that might fail 
         But the code should be robust against all failures , so error 
         checking can be improved. 
-     
-     3. Tuning the parametrs based on the workload.
-     
-     4 .Thread stress testing : I did not do full fledged stress test of the 
-        like by spawning very large number of threads that can be done. 
-        And we can profile the code accordingly    
+   
+     4 .Thread stress testing : I did not do full fledged stress test of the utility , 
+        like by spawning very large number of threads and seeing how the system holds. 
+        
         
         
 #Author : 
